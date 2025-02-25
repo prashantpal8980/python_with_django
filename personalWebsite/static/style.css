@@ -1,8 +1,68 @@
-body{
-    background-color: #08153d;
-    color: #FFFFFF;
+/* home_style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center; /* Center content */
 }
-h1{
-    text-align: center;
-    font-size: 2em;
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+main {
+    width: 80%;
+    margin: 50px auto; /* Increased margin for better spacing */
+    background-color: #fff;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+}
+
+.page-link {
+    display: inline-block;
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em; /* Increased font size */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.page-link:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .page-link {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
 }
