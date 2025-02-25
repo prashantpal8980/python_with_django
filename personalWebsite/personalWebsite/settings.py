@@ -54,7 +54,7 @@ ROOT_URLCONF = 'personalWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], # This is the line that needs to be added
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
