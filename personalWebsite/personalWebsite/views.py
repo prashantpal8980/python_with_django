@@ -1,7 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse('Hello, Prashant here')
+   # return HttpResponse('Hello, Prashant here')
+   return render(request, 'index.html')
 
 def about(request):
     return HttpResponse('Well i am a Cyber Security Enthusiast and love linux over windows')
