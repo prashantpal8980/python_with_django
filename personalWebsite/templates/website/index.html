@@ -4,11 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Memories with Friends</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Hello there you are at personal website.</h1>
-    <p> Which is hosted on prashants freaking own server</p>
+    <header>
+        <nav>
+            <div class="logo">B.Tech Memories</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Memories with Friends</h1>
+        <p>Capturing the best moments of our B.Tech journey</p>
+        <div class="gallery">
+            <img src="friend1.jpg" alt="Friend 1">
+            <img src="friend2.jpg" alt="Friend 2">
+            <img src="friend3.jpg" alt="Friend 3">
+            <img src="friend4.jpg" alt="Friend 4">
+        </div>
+    </section>
+
+    <section class="highlights">
+        <h2>Best Moments</h2>
+        <p>Relive the unforgettable times we spent together.</p>
+    </section>
+
+    <section class="recent-works">
+        <h2>Group Pictures</h2>
+        <div class="work-gallery">
+            <img src="group1.jpg" alt="Group 1">
+            <img src="group2.jpg" alt="Group 2">
+            <img src="group3.jpg" alt="Group 3">
+            <img src="group4.jpg" alt="Group 4">
+        </div>
+    </section>
+
+    <section class="farewell">
+        <h2>Farewell & Last Days</h2>
+        <div class="farewell-gallery">
+            <img src="farewell1.jpg" alt="Farewell 1">
+            <img src="farewell2.jpg" alt="Farewell 2">
+        </div>
+    </section>
 </body>
 </html>
