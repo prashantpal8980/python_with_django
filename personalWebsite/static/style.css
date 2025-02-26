@@ -8,6 +8,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     text-align: center; /* Center content */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 header {
@@ -53,6 +54,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -66,3 +68,4 @@ footer {
         font-size: 1em;
     }
 }
+

@@ -791,6 +791,10 @@ select {
   position: fixed;
 }
 
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -828,6 +832,10 @@ select {
   display: grid;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -840,8 +848,16 @@ select {
   width: 100%;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .flex-grow {
   flex-grow: 1;
+}
+
+.auto-rows-auto {
+  grid-auto-rows: auto;
 }
 
 .grid-cols-1 {
@@ -862,6 +878,14 @@ select {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .rounded-full {
@@ -908,8 +932,17 @@ select {
   --tw-bg-opacity: 0.9;
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-8 {
@@ -977,6 +1010,11 @@ select {
   line-height: 1.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -991,6 +1029,11 @@ select {
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-700 {
@@ -1008,6 +1051,12 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1019,6 +1068,12 @@ select {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
 
+@media (min-width: 640px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 768px) {
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
@@ -1026,5 +1081,15 @@ select {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

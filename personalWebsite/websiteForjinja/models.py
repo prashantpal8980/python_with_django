@@ -21,4 +21,4 @@ class TellTheStroy(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.name
+        return self.name + ': ' + self.story
