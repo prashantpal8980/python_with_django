@@ -17,7 +17,7 @@ Incident Page
                 </h3>
                 <p class="text-gray-700 mb-2 break-words">{{ data.story }}</p>
                 <p class="text-sm text-gray-500 break-words">{{ data.date_posted }}</p>
-                <a href="#incident-{{ data.id }}" class="inline-block mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="/websiteForjinja/{{ data.id }}" class="inline-block mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     View Details
                 </a>
             </div>
@@ -25,43 +25,9 @@ Incident Page
             <img src="{{ data.image.url }}" alt="Incident Image" class="w-full max-w-full h-auto object-cover">
             {% endif %}
         </div>
-
-        <div id="incident-{{ data.id }}" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center hidden">
-            <div class="bg-white rounded-lg p-8 max-w-lg w-full">
-                <h2 class="text-2xl font-bold mb-4">{{ data.name }} Details</h2>
-                <p class="mb-2"><strong>Story:</strong> {{ data.story }}</p>
-                <p class="mb-2"><strong>Date Posted:</strong> {{ data.date_posted }}</p>
-                {% if data.image %}
-                <img src="{{ data.image.url }}" alt="Incident Image" class="w-full max-w-full h-auto object-cover mb-4">
-                {% endif %}
-                <button onclick="closeModal('incident-{{ data.id }}')" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Close</button>
-            </div>
-        </div>
-
         {% empty %}
         <p class="text-center col-span-full text-gray-500">No incidents available.</p>
         {% endfor %}
     </div>
 </div>
-
-<script>
-    function closeModal(modalId) {
-        document.getElementById(modalId).classList.add('hidden');
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const detailLinks = document.querySelectorAll('a[href^="#incident-"]');
-
-        detailLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const modalId = this.getAttribute('href').substring(1);
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.classList.remove('hidden');
-                }
-            });
-        });
-    });
-</script>
 {% endblock %}

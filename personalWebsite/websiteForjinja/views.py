@@ -13,4 +13,4 @@ def incidentReturn(request):
 
 def incidentDetail(request,incident_id):
     aboutIncident=get_object_or_404(TellTheStroy,pk=incident_id)
-    return render(request, 'incidentDetail.html',{'incident':aboutIncident})
+    return render(request, 'incidentDetail.html',{'incident':aboutIncident}) 
