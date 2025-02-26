@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech Memories: Share Your Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('https://www.trendingus.com/wp-content/uploads/2022/09/Good-Comments-for-College-Memories.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-opacity-75 bg-gray-800 text-white text-center py-8">
+            <h1 class="text-4xl font-bold mb-2">B.Tech Memories</h1>
+            <p class="text-lg">Share your unforgettable moments with us!</p>
+        </header>
+
+        <main class="container mx-auto mt-12 p-8 bg-white bg-opacity-90 rounded-lg shadow-xl flex-grow">
+            <section id="memory-form">
+                <h2 class="text-3xl font-semibold mb-6 border-b pb-4 text-gray-800">Tell Your Story</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name" name="name" required class="w-full p-3 border rounded-lg">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg">
+                        </div>
+                        <div>
+                            <label for="memory-title" class="block text-gray-700 text-sm font-bold mb-2">Memory Title:</label>
+                            <input type="text" id="memory-title" name="memory-title" required class="w-full p-3 border rounded-lg">
+                        </div>
+                        <div>
+                            <label for="date" class="block text-gray-700 text-sm font-bold mb-2">Date of Memory (Approx.):</label>
+                            <input type="date" id="date" name="date" class="w-full p-3 border rounded-lg">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="memory-text" class="block text-gray-700 text-sm font-bold mb-2">Your Memory:</label>
+                            <textarea id="memory-text" name="memory-text" rows="6" required class="w-full p-3 border rounded-lg"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="memory-image" class="block text-gray-700 text-sm font-bold mb-2">Upload Image (Optional):</label>
+                            <input type="file" id="memory-image" name="memory-image" accept="image/*" class="w-full">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="tags" class="block text-gray-700 text-sm font-bold mb-2">Tags (e.g., friends, exams, events):</label>
+                            <input type="text" id="tags" name="tags" class="w-full p-3 border rounded-lg">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="location" class="block text-gray-700 text-sm font-bold mb-2">Location (Optional):</label>
+                            <input type="text" id="location" name="location" class="w-full p-3 border rounded-lg">
+                        </div>
+                    </div>
+                    <div class="text-center mt-6">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full">Share Memory</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="bg-opacity-75 bg-gray-800 text-white text-center py-4 mt-auto">
+            <p>&copy; 2024 Your Name</p>
+        </footer>
+    </div>
+</body>
+</html>

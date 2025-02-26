@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def Education(request):
-    return render(request, 'Education.html')
+    return render(request, 'incident.html')
