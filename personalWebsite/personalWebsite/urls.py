@@ -24,4 +24,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('hobbies/', views.hobbies, name='hobbies'),
     path('websiteForjinja/', include('websiteForjinja.urls')),
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
