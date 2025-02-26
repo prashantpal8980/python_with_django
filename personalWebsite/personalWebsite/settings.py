@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'websiteForjinja',
     'tailwind',
     'theme',
+    'django_browser_reload',
 ]
 # manually added by me
 # 'theme' is the name of the app that I created
