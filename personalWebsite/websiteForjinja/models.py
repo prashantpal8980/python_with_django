@@ -10,6 +10,7 @@ class TellTheStroy(models.Model):
         ('DJ', 'Deepak Jha'),
     ]
     name = models.CharField(max_length=2, choices=GROUP_MEMBERS)
+    story= models.TextField(max_length=1000,default='Once upon a time...')
     image = models.ImageField(upload_to='images/')
     date_posted = models.DateTimeField(default=timezone.now)
 
