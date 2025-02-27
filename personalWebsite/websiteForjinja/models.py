@@ -16,6 +16,9 @@ class TellTheStroy(models.Model):
         ('Deepak Jha', 'Deepak Jha'),
     ]
     name = models.CharField(max_length=20, choices=GROUP_MEMBERS)
+    email=models.EmailField(max_length=100)
+    memoryTitle=models.CharField(max_length=100,default='Memory Title')
+    dateOfMemory=models.DateField(default=timezone.now)
     story= models.TextField(max_length=1000,default='Once upon a time...')
     image = models.ImageField(upload_to='images/')
     date_posted = models.DateTimeField(default=timezone.now)

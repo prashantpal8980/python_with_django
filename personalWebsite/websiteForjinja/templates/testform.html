@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}
+Test Form
+{% endblock %}
+{% block content %}
+<h1>kdjflsfdsljvfdnncknvfdbfjcnds gnvds ngjnd Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloribus in fugiat, est magnam dolorem! Rerum fuga, ex sint doloribus deserunt tenetur maxime ipsum amet sunt. Nam quibusdam aspernatur dignissimos!</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
