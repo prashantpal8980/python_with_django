@@ -3,10 +3,9 @@
 Test Form
 {% endblock %}
 {% block content %}
-<h1>kdjflsfdsljvfdnncknvfdbfjcnds gnvds ngjnd Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel doloribus in fugiat, est magnam dolorem! Rerum fuga, ex sint doloribus deserunt tenetur maxime ipsum amet sunt. Nam quibusdam aspernatur dignissimos!</h1>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form}}
+    {{ form }}
     <button type="submit">Submit</button>
 </form>
 {% endblock %}

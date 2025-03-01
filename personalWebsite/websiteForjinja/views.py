@@ -34,13 +34,35 @@ def incidentDetail(request,incident_id):
     aboutIncident=get_object_or_404(TellTheStroy,pk=incident_id)
     return render(request, 'incidentDetail.html',{'incident':aboutIncident}) 
 
+# def testForm(request):
+#     incident=None
+#     if request.method == 'POST':
+#         form=IncidentForm(request.POST)
+#         if form.is_valid():
+#             incident=TellTheStroy(name=form.cleaned_data['name'],email=form.cleaned_data['email'],memoryTitle=form.cleaned_data['memoryTitle'],dateOfMemory=form.cleaned_data['dateOfMemory'],story=form.cleaned_data['story'],image=form.cleaned_data['image'],date_posted=form.cleaned_data['date_posted'])
+#             incident.save() 
+#     else:
+#         form=IncidentForm()
+#     return render(request, 'testform.html', {'form':form})
+
+
 def testForm(request):
-    incident=None
+    incident = None
     if request.method == 'POST':
-        form=IncidentForm(request.POST)
+        form = IncidentForm(request.POST, request.FILES)  # Include request.FILES
         if form.is_valid():
-            incident=TellTheStroy(name=form.cleaned_data['name'],email=form.cleaned_data['email'],memoryTitle=form.cleaned_data['memoryTitle'],dateOfMemory=form.cleaned_data['dateOfMemory'],story=form.cleaned_data['story'],image=form.cleaned_data['image'],date_posted=form.cleaned_data['date_posted'])
-            incident.save() 
+            # Create a new TellTheStroy instance using the form data
+            incident = TellTheStroy(
+                name=form.cleaned_data['name'],
+                email=form.cleaned_data['email'],
+                memoryTitle=form.cleaned_data['memoryTitle'],
+                dateOfMemory=form.cleaned_data['dateOfMemory'],
+                story=form.cleaned_data['story'],
+                image=form.cleaned_data['image'],  # The image is properly handled
+                date_posted=form.cleaned_data['date_posted']
+            )
+            incident.save()
+            # Optionally, you can redirect or display a success message here
     else:
-        form=IncidentForm()
-    return render(request, 'testform.html', {'form':form})
+        form = IncidentForm()
+    return render(request, 'testform.html', {'form': form})
